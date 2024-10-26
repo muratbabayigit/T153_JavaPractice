@@ -30,7 +30,7 @@ public class P05_casting {
         System.out.println("=========================================");
 
 
-        System.out.println("LÜtfen iki adet tam sayı giriniz ve sonrasında Enter Tuşuna Basınız!");
+        System.out.println("Lütfen iki adet tam sayı giriniz ve sonrasında Enter Tuşuna Basınız!");
         System.out.print("1.Sayı: ");
         int sayi3= scan.nextInt();
         System.out.print("2.Sayı: ");
