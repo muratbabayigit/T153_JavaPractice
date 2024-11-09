@@ -41,6 +41,27 @@ public class P03_sayiTahminOyunu {
                 }
             }
 
-
+       //int hedefSayi = random.nextInt(1,25);
+       //System.out.println("1 ile 25 arasinda bir sayi tuttum, tahmin et. 5 hakkin var.");
+       //System.out.println("Tahminini gir.");
+       //int tahmin = scanner.nextInt();
+       //int tahminSayisi=1;
+       //if (tahminSayisi<5 && tahmin!=hedefSayi){
+       //    while (tahminSayisi<5 && tahmin!=hedefSayi){
+       //        System.out.println("Malesef bilemediniz, " + (5-tahminSayisi) + " Hakkiniz kaldi. ");
+       //        if (tahmin<hedefSayi){
+       //            System.out.println(" Tuttugum sayi daha yuksek.");
+       //        } else if (tahmin>hedefSayi) {
+       //            System.out.println(" Tuttugum sayi daha dusuk.");
+       //        }
+       //        tahmin = scanner.nextInt();
+       //        tahminSayisi++;
+       //    }
+       //}
+       //if (tahmin==hedefSayi){
+       //    System.out.println("Tebrikler " + tahminSayisi + ". tahmininizde bildiniz. sayi " + hedefSayi+" idi.");
+       //}else {
+       //    System.out.println("Malesef bilemediniz, sayi "+ hedefSayi+" idi.");
+       //}
         }
         }
