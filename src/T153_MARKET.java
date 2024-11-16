@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class T153_MARKET {
 
-    static Scanner scan=new Scanner(System.in);
-    static int secim;
             /*
      Bir market yazılımı yazdığınızı düşünerek aşşağıdaki menü ile giriş yapıp, ilgili bölüme yönlendiren
      alışveriş yaptıran ve sepet tutarını hesaplayarak hafızada tutan, kasaya gidince fiş yazdıran bir program
@@ -18,6 +16,20 @@ public class T153_MARKET {
       5-fiyatlari gelsin
 
     */
+
+    static Scanner scan=new Scanner(System.in);
+    static int secim;
+    static boolean ekUrun=false;
+    static int urunKodu;
+    static int urunMiktari;
+    static String urunAdi="";
+    static int urunfiyati;
+    static int toplam;
+    static String sepet="";
+    static int tutar;
+
+
+
      public static void main(String[] args) {
         girisEkrani();
      }
@@ -45,8 +57,36 @@ public class T153_MARKET {
     }
 
     public static void sarkuteri() {
-        System.out.println("==================== ŞARKÜTERİ REYONU ===================================");
+        System.out.println("===================== ŞARKÜTERİ REYONU ===================================");
         System.out.println("*****************  LÜTFEN MENÜDEN SEÇİM YAPINIZ  *****************");
+        System.out.println("101-Peynir 1kg paket 250₺\n102-Yoğurt  5kg paket 160₺\n103-Sucuk 1kg paket 450₺\n104-Pastırma  100g paket 200₺\n105-Yumurta 1 paket 140₺");
+
+        while(!ekUrun){
+            urunKodu= scan.nextInt();
+            if (urunKodu>=101 && urunKodu<=105){
+                System.out.print("Kaç Paket Alacaksınız: ");
+                urunMiktari= scan.nextInt();
+
+                switch (urunKodu){
+                    case 101: urunAdi="Peynir"; urunfiyati=250; break;
+                    case 102: urunAdi="Yoğurt"; urunfiyati=160; break;
+                    case 103: urunAdi="Sucuk"; urunfiyati=450; break;
+                    case 104: urunAdi="Pastırma"; urunfiyati=200; break;
+                    case 105: urunAdi="Yumurta"; urunfiyati=140; break;
+                }
+                System.out.println(urunMiktari+" paket "+(urunfiyati*urunMiktari)+"₺");
+                tutar=urunfiyati*urunMiktari;
+                toplam+=tutar;
+                sepet+=urunAdi+"______"+urunMiktari+"------------"+tutar+"₺\n";
+
+                System.out.println();
+                System.out.println("Toplam Alışveriş Tutarı: "+toplam+" ₺");
+                System.out.print("Bu reyondan başka bir ürün almak istiyor musunuz?\nİstiyorsanız Ürün Kodu Giriniz\nAna Menüye dönmek için 0 (Sıfır) tuşuna basınız");
+                System.out.println("Seçiminiz: ");
+                }else if (urunKodu==0){
+                girisEkrani();
+            }
+            }
     }
 
     public static void manav() {
